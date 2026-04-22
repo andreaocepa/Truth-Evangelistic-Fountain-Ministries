@@ -1,0 +1,188 @@
+/* Events Page Styles */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+.service-card {
+  text-align: center;
+  padding: var(--space-2xl);
+}
+
+.service-card__icon-wrap {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(var(--gold-rgb), 0.2), rgba(var(--gold-rgb), 0.05));
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-lg);
+  border: 1px solid rgba(var(--gold-rgb), 0.3);
+  transition: all var(--transition-base);
+}
+
+.service-card:hover .service-card__icon-wrap {
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  color: var(--text-dark);
+  transform: scale(1.1);
+}
+
+.service-card__day {
+  font-size: 1.6rem;
+  color: var(--gold);
+  margin-bottom: var(--space-xs);
+}
+
+.service-card__name {
+  font-size: 1.1rem;
+  margin-bottom: var(--space-md);
+  font-family: var(--font-body);
+  font-weight: 600;
+}
+
+.service-card__desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: var(--space-lg);
+}
+
+.service-card__time,
+.service-card__location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.4rem;
+}
+
+.service-card__time svg,
+.service-card__location svg {
+  color: var(--primary-light);
+}
+
+/* Conferences */
+.events-conferences {
+  background: var(--bg-section);
+}
+
+.conferences-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xl);
+}
+
+.conference-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all var(--transition-base);
+}
+
+.conference-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: rgba(46, 134, 193, 0.35);
+}
+
+.conference-card__image-wrap {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.conference-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.conference-card:hover .conference-card__image {
+  transform: scale(1.08);
+}
+
+.conference-card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(to top, var(--bg-card), transparent);
+}
+
+.conference-card__tag {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-warm));
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.conference-card__body {
+  padding: var(--space-xl);
+}
+
+.conference-card__title {
+  font-size: 1.3rem;
+  margin-bottom: var(--space-sm);
+}
+
+.conference-card__desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: var(--space-md);
+  line-height: 1.6;
+}
+
+.conference-card__meta {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+.conference-card__attendees {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--primary-light);
+  font-weight: 500;
+}
+
+/* Radio */
+.radio-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4xl);
+  align-items: center;
+}
+
+.radio-section__content p {
+  margin-bottom: var(--space-lg);
+}
+
+.radio-section__image {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+@media (max-width: 768px) {
+  .services-grid,
+  .conferences-grid,
+  .radio-section {
+    grid-template-columns: 1fr;
+  }
+}

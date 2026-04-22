@@ -1,0 +1,159 @@
+/* Projects Page Styles */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+.project-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.project-card__image-wrap {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.project-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.project-card:hover .project-card__image {
+  transform: scale(1.08);
+}
+
+.project-card__image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to top, var(--bg-card), transparent);
+}
+
+.project-card__status {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 0.2rem 0.7rem;
+  border-radius: var(--radius-full);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.project-card__status--in-progress {
+  background: rgba(46, 134, 193, 0.9);
+  color: white;
+}
+
+.project-card__status--planning {
+  background: rgba(212, 160, 23, 0.9);
+  color: var(--text-dark);
+}
+
+.project-card__status--ongoing,
+.project-card__status--active {
+  background: rgba(39, 174, 96, 0.9);
+  color: white;
+}
+
+.project-card__body {
+  padding: var(--space-lg) var(--space-xl) var(--space-xl);
+  position: relative;
+}
+
+.project-card__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -34px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 4px 15px rgba(var(--primary-rgb), 0.4);
+}
+
+.project-card__title {
+  font-size: 1.15rem;
+  margin: var(--space-md) 0 var(--space-sm);
+}
+
+.project-card__desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: var(--space-lg);
+}
+
+.project-card__progress {
+  margin-top: auto;
+}
+
+.project-card__progress-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 0.4rem;
+}
+
+.project-card__progress-bar {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.project-card__progress-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  background: linear-gradient(90deg, var(--primary-light), var(--gold));
+  transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* CTA */
+.projects-cta {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: var(--space-3xl);
+}
+
+.projects-cta__icon {
+  color: var(--accent);
+  margin-bottom: var(--space-md);
+}
+
+.projects-cta h3 {
+  margin-bottom: var(--space-md);
+}
+
+.projects-cta p {
+  margin-bottom: var(--space-xl);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
