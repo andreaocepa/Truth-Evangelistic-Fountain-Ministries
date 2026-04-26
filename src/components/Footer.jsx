@@ -25,9 +25,8 @@ export default function Footer() {
             {/* Brand */}
             <div className="footer__brand-col">
               <Link to="/" className="footer__brand" id="footer-brand">
-                <img src="/images/logo (1)_1753292252843.jpg" alt="TEFM Logo" className="footer__logo" />
+                <img src="/images/logo (1)_1753292252843.jpg" alt="Ministry Logo" className="footer__logo" />
                 <div>
-                  <span className="footer__brand-name">TEFM</span>
                   <span className="footer__brand-tagline">Truth Evangelistic Fountain Ministries</span>
                 </div>
               </Link>

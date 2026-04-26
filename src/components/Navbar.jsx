@@ -40,11 +40,10 @@ export default function Navbar() {
         <Link to="/" className="navbar__brand" id="navbar-brand">
           <img
             src="/images/logo (1)_1753292252843.jpg"
-            alt="TEFM Logo"
+            alt="Ministry Logo"
             className="navbar__logo"
           />
           <div className="navbar__brand-text">
-            <span className="navbar__brand-name">TEFM</span>
             <span className="navbar__brand-tagline">Truth Evangelistic Fountain Ministries</span>
           </div>
         </Link>

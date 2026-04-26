@@ -29,7 +29,7 @@ export default function HeroSection({
   return (
     <section 
       className="hero" 
-      style={{ minHeight: height }}
+      style={{ '--hero-height': height }}
       id="hero-section"
     >
       {/* Parallax background */}
