@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import './Navbar.css';
 
 const navLinks = [
@@ -10,6 +10,7 @@ const navLinks = [
   { path: '/events', label: 'Events' },
   { path: '/outreach', label: 'Outreach' },
   { path: '/projects', label: 'Projects' },
+  { path: '/gallery', label: 'Gallery' },
   { path: '/contact', label: 'Contact' },
 ];
 
@@ -37,10 +38,10 @@ export default function Navbar() {
     <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`} id="main-navbar">
       <div className="navbar__container container">
         <Link to="/" className="navbar__brand" id="navbar-brand">
-          <img 
-            src="/images/logo (1)_1753292252843.jpg" 
-            alt="TEFM Logo" 
-            className="navbar__logo" 
+          <img
+            src="/images/logo (1)_1753292252843.jpg"
+            alt="TEFM Logo"
+            className="navbar__logo"
           />
           <div className="navbar__brand-text">
             <span className="navbar__brand-name">TEFM</span>
@@ -49,24 +50,26 @@ export default function Navbar() {
         </Link>
 
         <div className={`navbar__links ${mobileOpen ? 'navbar__links--open' : ''}`}>
-          {navLinks.map(({ path, label }) => (
-            <Link
-              key={path}
-              to={path}
-              className={`navbar__link ${location.pathname === path ? 'navbar__link--active' : ''}`}
-              id={`nav-link-${label.toLowerCase()}`}
-            >
-              {label}
-              <span className="navbar__link-indicator" />
+          <div className="navbar__links-inner">
+            {navLinks.map(({ path, label }) => (
+              <Link
+                key={path}
+                to={path}
+                className={`navbar__link ${location.pathname === path ? 'navbar__link--active' : ''}`}
+                id={`nav-link-${label.toLowerCase()}`}
+              >
+                {label}
+                <span className="navbar__link-indicator" />
+              </Link>
+            ))}
+            <Link to="/contact" className="btn btn-accent navbar__cta" id="nav-cta">
+              Join Us
             </Link>
-          ))}
-          <Link to="/contact" className="btn btn-accent navbar__cta" id="nav-cta">
-            Join Us
-          </Link>
+          </div>
         </div>
 
-        <button 
-          className="navbar__toggle" 
+        <button
+          className="navbar__toggle"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle navigation menu"
           id="navbar-toggle"

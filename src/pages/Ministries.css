@@ -131,7 +131,44 @@
     min-height: 220px;
   }
 
+  .ministry-detail__content {
+    padding: var(--space-xl);
+  }
+
   .ministry-detail__highlights {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .ministry-detail__image-wrap {
+    min-height: 190px;
+  }
+
+  .ministry-detail__content {
+    padding: var(--space-lg);
+  }
+
+  .ministry-detail__title {
+    font-size: 1.2rem;
+  }
+
+  .ministry-detail__highlights {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .ministry-detail__highlights li {
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .ministry-detail__image-wrap {
+    min-height: 170px;
+  }
+
+  .ministry-detail__content {
+    padding: var(--space-md);
   }
 }

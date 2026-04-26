@@ -156,4 +156,40 @@
   .projects-grid {
     grid-template-columns: 1fr;
   }
+
+  .projects-cta {
+    padding: var(--space-2xl) var(--space-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card__image-wrap {
+    height: 180px;
+  }
+
+  .project-card__body {
+    padding: var(--space-md) var(--space-lg) var(--space-lg);
+  }
+
+  .project-card__title {
+    font-size: 1rem;
+  }
+
+  .projects-cta {
+    padding: var(--space-xl) var(--space-md);
+  }
+
+  .projects-cta h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .project-card__image-wrap {
+    height: 160px;
+  }
+
+  .project-card__body {
+    padding: var(--space-md);
+  }
 }

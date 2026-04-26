@@ -401,9 +401,14 @@
 }
 
 @media (max-width: 768px) {
+  .stats-bar {
+    margin-top: -40px;
+  }
+
   .stats-bar__grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-lg);
+    gap: 0;
+    padding: var(--space-lg);
   }
 
   .stats-bar__item:not(:last-child)::after {
@@ -411,14 +416,18 @@
   }
 
   .stats-bar__number {
-    font-size: 2rem;
+    font-size: 1.75rem;
+  }
+
+  .stats-bar__label {
+    font-size: 0.75rem;
   }
 
   .home-about__grid,
   .home-vm__grid,
   .home-services__grid {
     grid-template-columns: 1fr;
-    gap: var(--space-2xl);
+    gap: var(--space-xl);
   }
 
   .home-about__image--accent {
@@ -435,11 +444,89 @@
     top: 10px;
   }
 
+  .home-about__features {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+    margin: var(--space-lg) 0;
+  }
+
   .home-ministries__grid {
     grid-template-columns: 1fr;
   }
 
+  .home-vm__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-vm__card {
+    padding: var(--space-xl) var(--space-lg);
+  }
+
   .home-services__image {
-    height: 300px;
+    height: 260px;
+  }
+
+  .home-services__svc-item {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .home-services__svc-day {
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-bar__grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: var(--space-md);
+    border-radius: var(--radius-lg);
+  }
+
+  .stats-bar__number {
+    font-size: 1.5rem;
+  }
+
+  .stats-bar__icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .home-about__image-badge {
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .home-about__badge-number {
+    font-size: 1.5rem;
+  }
+
+  .home-cta__buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-cta__buttons .btn {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+
+  .home-services__image {
+    height: 220px;
+  }
+}
+
+@media (max-width: 375px) {
+  .stats-bar__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+
+  .stats-bar__item {
+    padding: var(--space-sm);
+  }
+
+  .stats-bar__number {
+    font-size: 1.35rem;
   }
 }

@@ -9,6 +9,7 @@ import Events from './pages/Events';
 import Outreach from './pages/Outreach';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
+import Gallery from './pages/Gallery';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -31,6 +32,7 @@ export default function App() {
           <Route path="/events" element={<Events />} />
           <Route path="/outreach" element={<Outreach />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
