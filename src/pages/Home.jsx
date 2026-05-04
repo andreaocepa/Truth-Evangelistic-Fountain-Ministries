@@ -70,8 +70,8 @@ export default function Home() {
     <div className="home-page">
       {/* ===== HERO ===== */}
       <HeroSection
-        title="Building Faithful Witnesses for Christ"
-        subtitle="Welcome to Truth Evangelistic Fountain Ministries — Sharing the Blessings of Redemption since 2002. Join us as we transform lives through the power of the Gospel across Uganda and beyond."
+        title="Experience Grace, Find Your Purpose"
+        subtitle="Join a vibrant community dedicated to sharing the blessings of redemption and transforming lives through the power of the Gospel across Uganda and beyond."
         backgroundImages={[
           "/images/Truth_Fountain_Mission_Cathedral.jpg_1771846227344-BiuEyWkq.jpeg",
           "/images/Home Hero.jpg",

@@ -85,7 +85,7 @@ export default function HeroSection({
         <h1 className="hero__title">
           {title.split(' ').map((word, i) => (
             <span key={i} className="hero__title-word" style={{ animationDelay: `${0.1 + i * 0.08}s` }}>
-              {word}{' '}
+              {word}
             </span>
           ))}
         </h1>

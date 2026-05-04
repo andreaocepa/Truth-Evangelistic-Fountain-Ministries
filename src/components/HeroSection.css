@@ -104,7 +104,9 @@
   font-size: clamp(2.5rem, 6vw, 5rem);
   font-weight: 800;
   line-height: 1.1;
+  letter-spacing: -0.02em;
   margin-bottom: var(--space-lg);
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
   overflow: hidden;
 }
 
@@ -113,6 +115,11 @@
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 0.7s ease forwards;
+  margin-right: 0.3em;
+}
+
+.hero__title-word:last-child {
+  margin-right: 0;
 }
 
 .hero__subtitle {
@@ -122,7 +129,8 @@
   margin: 0 auto var(--space-2xl);
   animation: fadeIn 1s ease 0.5s forwards;
   opacity: 0;
-  line-height: 1.7;
+  line-height: 1.8;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .hero__cta-group {
@@ -176,8 +184,10 @@
 
   .hero__subtitle {
     font-size: 0.97rem;
-    max-width: 100%;
-    padding: 0 var(--space-sm);
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
   }
 }
 
