@@ -1,0 +1,249 @@
+.weekly-programs-section {
+  padding: var(--space-4xl) 0;
+  background: radial-gradient(circle at center, rgba(var(--primary-rgb), 0.05) 0%, transparent 70%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Header Styling */
+.wp-header {
+  text-align: center;
+  margin-bottom: var(--space-3xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wp-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.wp-title-icon {
+  color: var(--gold);
+}
+
+.wp-title {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  margin: 0;
+  background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.wp-subtitle-highlight {
+  background: rgba(var(--gold-rgb), 0.1);
+  border: 1px solid rgba(var(--gold-rgb), 0.2);
+  padding: 0.5rem 1.5rem;
+  border-radius: var(--radius-full);
+  margin-top: var(--space-md);
+}
+
+.wp-subtitle-highlight span {
+  color: var(--gold-light);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+}
+
+/* Sunday Grid - 2 Columns */
+.sunday-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xl);
+  margin-bottom: var(--space-2xl);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sunday-card {
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.15), rgba(var(--primary-rgb), 0.05));
+  border-color: rgba(var(--primary-rgb), 0.3);
+}
+
+.day-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(var(--gold-rgb), 0.15);
+  color: var(--gold-light);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: var(--space-md);
+}
+
+.program-title {
+  font-size: 1.5rem;
+  margin-bottom: var(--space-xs);
+  color: var(--text-primary);
+}
+
+.program-time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--gold);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Weekday Grid - 3 Columns */
+.weekday-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+.parent-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: rgba(15, 30, 55, 0.4);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.day-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.day-icon {
+  color: var(--primary-light);
+}
+
+.day-title {
+  font-size: 1.25rem;
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+/* Sub-cards for Wednesday */
+.sub-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.program-sub-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  transition: all var(--transition-base);
+}
+
+.program-sub-card:hover {
+  background: rgba(var(--primary-rgb), 0.1);
+  border-color: rgba(var(--primary-rgb), 0.2);
+  transform: translateX(5px);
+}
+
+.sub-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.sub-icon {
+  color: var(--accent-warm);
+}
+
+.sub-program-title {
+  font-size: 1rem;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.sub-program-time {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  display: block;
+  margin-left: 1.4rem;
+}
+
+/* Focused Cards (Thursday/Friday) */
+.focused-card {
+  border-color: rgba(var(--primary-rgb), 0.25);
+  background: linear-gradient(180deg, rgba(15, 30, 55, 0.4) 0%, rgba(27, 79, 114, 0.1) 100%);
+}
+
+.focused-program-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.focused-program-content .program-title {
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.focused-program-content .program-time {
+  justify-content: flex-start;
+  font-size: 0.95rem;
+}
+
+.program-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .weekday-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .weekday-column:last-child {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .sunday-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .weekday-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .weekday-column:last-child {
+    grid-column: span 1;
+  }
+
+  .wp-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sunday-card, .parent-card {
+    padding: var(--space-lg);
+  }
+  
+  .program-title {
+    font-size: 1.25rem;
+  }
+}

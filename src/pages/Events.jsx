@@ -1,6 +1,7 @@
 import { Clock, Calendar, MapPin, Users, Star, Zap, Flame, Heart } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import ScrollReveal from '../components/ScrollReveal';
+import WeeklyPrograms from '../components/WeeklyPrograms';
 import './Events.css';
 
 const services = [
@@ -56,38 +57,7 @@ export default function Events() {
       />
 
       {/* Weekly Programs */}
-      <section className="section" id="weekly-services">
-        <div className="container">
-          <ScrollReveal className="section-centered">
-            <span className="section-label">Weekly Gatherings</span>
-            <h2 className="section-title">Weekly Programs</h2>
-            <p className="section-subtitle">We'd love to have you join us for worship. All are welcome!</p>
-          </ScrollReveal>
-
-          <div className="services-grid">
-            {services.map((svc, i) => (
-              <ScrollReveal key={i} delay={i + 1}>
-                <div className="service-card glass-card" id={`service-${svc.day.toLowerCase()}`}>
-                  <div className="service-card__icon-wrap">
-                    <svc.icon size={28} />
-                  </div>
-                  <h3 className="service-card__day">{svc.day}</h3>
-                  <h4 className="service-card__name">{svc.name}</h4>
-                  <p className="service-card__desc">{svc.desc}</p>
-                  <div className="service-card__time">
-                    <Clock size={16} />
-                    <span>{svc.time}</span>
-                  </div>
-                  <div className="service-card__location">
-                    <MapPin size={16} />
-                    <span>TEFM Main Sanctuary, Lira</span>
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
+      <WeeklyPrograms />
 
       {/* Conferences */}
       <section className="section events-conferences" id="conferences">
