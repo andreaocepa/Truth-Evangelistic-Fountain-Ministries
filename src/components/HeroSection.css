@@ -157,8 +157,11 @@
   }
 
   .hero__bg {
-    /* Slight shift to ensure subjects in the center stay visible */
-    background-position: center 20%;
+    background-position: top center;
+    background-size: contain;
+    top: 0;
+    height: 100%;
+    transform: none !important;
   }
 
   .hero__cta {
