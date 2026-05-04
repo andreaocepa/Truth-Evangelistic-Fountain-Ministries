@@ -5,7 +5,8 @@ import './HeroSection.css';
 export default function HeroSection({ 
   title, 
   subtitle, 
-  backgroundImage, 
+  backgroundImage,
+  backgroundImages, 
   showCta = false,
   ctaText = 'Learn More',
   ctaLink = '/about',
@@ -17,6 +18,11 @@ export default function HeroSection({
   children 
 }) {
   const [offset, setOffset] = useState(0);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const images = backgroundImages && backgroundImages.length > 0 
+    ? backgroundImages 
+    : (backgroundImage ? [backgroundImage] : []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,6 +32,16 @@ export default function HeroSection({
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (images.length <= 1) return;
+    
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % images.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   return (
     <section 
       className="hero" 
@@ -33,13 +49,18 @@ export default function HeroSection({
       id="hero-section"
     >
       {/* Parallax background */}
-      <div 
-        className="hero__bg" 
-        style={{ 
-          backgroundImage: `url(${backgroundImage})`,
-          transform: `translateY(${offset}px)` 
-        }} 
-      />
+      {images.map((img, index) => (
+        <div 
+          key={index}
+          className={`hero__bg ${images.length > 1 ? 'hero__bg--transition' : ''}`}
+          style={{ 
+            backgroundImage: `url('${img}')`,
+            transform: `translateY(${offset}px)`,
+            opacity: index === currentImageIndex ? 1 : 0,
+            visibility: index === currentImageIndex || images.length > 1 ? 'visible' : 'hidden'
+          }} 
+        />
+      ))}
       
       {/* Gradient overlay */}
       {overlay && <div className="hero__overlay" />}
