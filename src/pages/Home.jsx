@@ -56,9 +56,13 @@ const featuredMinistries = [
 ];
 
 const serviceSchedule = [
-  { day: 'Sunday', time: '7:00 AM & 10:00 AM', service: 'Worship Service' },
+  { day: 'Sunday', time: '7:00 AM – 9:00 AM', service: '1st Service' },
+  { day: 'Sunday', time: '9:00 AM – 11:30 AM', service: '2nd Service' },
+  { day: 'Wednesday', time: '9:00 AM – 4:00 PM', service: "Women's Program" },
   { day: 'Wednesday', time: '5:00 PM – 6:30 PM', service: 'Youth Service' },
-  { day: 'Thursday', time: '5:00 PM – 7:00 PM', service: 'Midweek Service' },
+  { day: 'Wednesday', time: 'Evening Program', service: "Widows' Overnight" },
+  { day: 'Thursday', time: '4:00 PM – 6:30 PM', service: 'Mid-week Deliverance' },
+  { day: 'Friday', time: '9:00 PM till dawn', service: 'Overnight Prayers' },
 ];
 
 export default function Home() {
@@ -81,7 +85,7 @@ export default function Home() {
         showCta
         ctaText="Explore Our Mission"
         ctaLink="/about"
-        ctaText2="Service Times"
+        ctaText2="Weekly Programs"
         ctaLink2="/events"
         height="100vh"
       />
@@ -236,7 +240,7 @@ export default function Home() {
           <div className="home-services__grid">
             <ScrollReveal direction="left" className="home-services__info">
               <span className="section-label">Join Us</span>
-              <h2 className="section-title">Service Times</h2>
+              <h2 className="section-title">Weekly Programs</h2>
               <p>
                 Experience powerful worship, Spirit-filled teaching, and warm fellowship. 
                 We'd love to welcome you and your family!

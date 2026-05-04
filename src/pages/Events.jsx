@@ -4,9 +4,13 @@ import ScrollReveal from '../components/ScrollReveal';
 import './Events.css';
 
 const services = [
-  { day: 'Sunday', time: '7:00 AM & 10:00 AM', name: 'Sunday Worship Service', desc: 'A powerful time of praise, worship, and the preaching of the Word.', icon: Star },
+  { day: 'Sunday', time: '7:00 AM – 9:00 AM', name: '1st Service', desc: 'A powerful time of praise, worship, and the preaching of the Word.', icon: Star },
+  { day: 'Sunday', time: '9:00 AM – 11:30 AM', name: '2nd Service', desc: 'A continuation of our Sunday celebration with deep spiritual insights.', icon: Star },
+  { day: 'Wednesday', time: '9:00 AM – 4:00 PM', name: "Women's Program", desc: 'A dedicated time for women to grow, share and pray together.', icon: Heart },
   { day: 'Wednesday', time: '5:00 PM – 6:30 PM', name: 'Youth Service', desc: 'A vibrant gathering for young people to grow in faith and fellowship.', icon: Zap },
-  { day: 'Thursday', time: '5:00 PM – 7:00 PM', name: 'Midweek Service', desc: 'Recharge your spirit midweek with prayer, study, and community.', icon: Flame },
+  { day: 'Wednesday', time: 'Evening Program', name: "Widows' Overnight", desc: 'A special overnight program of prayer and fellowship for widows.', icon: Heart },
+  { day: 'Thursday', time: '4:00 PM – 6:30 PM', name: 'Mid-week Deliverance', desc: 'Powerful deliverance service seeking God\'s freedom and healing.', icon: Flame },
+  { day: 'Friday', time: '9:00 PM till dawn', name: 'Overnight Prayers', desc: 'All-night prayer vigil to seek God\'s face and presence.', icon: Flame },
 ];
 
 const conferences = [
@@ -51,12 +55,12 @@ export default function Events() {
         breadcrumb="Events"
       />
 
-      {/* Service Times */}
+      {/* Weekly Programs */}
       <section className="section" id="weekly-services">
         <div className="container">
           <ScrollReveal className="section-centered">
             <span className="section-label">Weekly Gatherings</span>
-            <h2 className="section-title">Service Schedule</h2>
+            <h2 className="section-title">Weekly Programs</h2>
             <p className="section-subtitle">We'd love to have you join us for worship. All are welcome!</p>
           </ScrollReveal>
 

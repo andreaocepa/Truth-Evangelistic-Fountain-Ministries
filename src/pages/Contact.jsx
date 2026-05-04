@@ -178,13 +178,17 @@ export default function Contact() {
         <div className="container section-centered">
           <ScrollReveal>
             <span className="section-label" style={{ justifyContent: 'center' }}>Visit Us</span>
-            <h2 className="section-title">Service Times</h2>
+            <h2 className="section-title">Weekly Programs</h2>
           </ScrollReveal>
           <div className="contact-services__grid">
             {[
-              { day: 'Sunday', time: '7:00 AM & 10:00 AM', name: 'Worship Service' },
+              { day: 'Sunday', time: '7:00 AM – 9:00 AM', name: '1st Service' },
+              { day: 'Sunday', time: '9:00 AM – 11:30 AM', name: '2nd Service' },
+              { day: 'Wednesday', time: '9:00 AM – 4:00 PM', name: "Women's Program" },
               { day: 'Wednesday', time: '5:00 PM – 6:30 PM', name: 'Youth Service' },
-              { day: 'Thursday', time: '5:00 PM – 7:00 PM', name: 'Midweek Service' },
+              { day: 'Wednesday', time: 'Evening Program', name: "Widows' Overnight" },
+              { day: 'Thursday', time: '4:00 PM – 6:30 PM', name: 'Mid-week Deliverance' },
+              { day: 'Friday', time: '9:00 PM till dawn', name: 'Overnight Prayers' },
             ].map((svc, i) => (
               <ScrollReveal key={i} delay={i + 1}>
                 <div className="contact-svc glass-card">
