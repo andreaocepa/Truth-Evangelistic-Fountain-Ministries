@@ -7,6 +7,7 @@ import {
 import HeroSection from '../components/HeroSection';
 import ScrollReveal from '../components/ScrollReveal';
 import AnimatedCounter from '../components/AnimatedCounter';
+import WeeklyPrograms from '../components/WeeklyPrograms';
 import './Home.css';
 
 const stats = [
@@ -55,22 +56,13 @@ const featuredMinistries = [
   },
 ];
 
-const serviceSchedule = [
-  { day: 'Sunday', time: '7:00 AM – 9:00 AM', service: '1st Service' },
-  { day: 'Sunday', time: '9:00 AM – 11:30 AM', service: '2nd Service' },
-  { day: 'Wednesday', time: '9:00 AM – 4:00 PM', service: "Women's Program" },
-  { day: 'Wednesday', time: '5:00 PM – 6:30 PM', service: 'Youth Service' },
-  { day: 'Wednesday', time: 'Evening Program', service: "Widows' Overnight" },
-  { day: 'Thursday', time: '4:00 PM – 6:30 PM', service: 'Mid-week Deliverance' },
-  { day: 'Friday', time: '9:00 PM till dawn', service: 'Overnight Prayers' },
-];
 
 export default function Home() {
   return (
     <div className="home-page">
       {/* ===== HERO ===== */}
       <HeroSection
-        title="Experience Grace, Find Your Purpose"
+        title="Building Faithful Witnesses for Christ"
         subtitle="Join a vibrant community dedicated to sharing the blessings of redemption and transforming lives through the power of the Gospel across Uganda and beyond."
         backgroundImages={[
           "/images/Truth_Fountain_Mission_Cathedral.jpg_1771846227344-BiuEyWkq.jpeg",
@@ -235,44 +227,7 @@ export default function Home() {
       </section>
 
       {/* ===== SERVICE TIMES ===== */}
-      <section className="section home-services" id="service-times">
-        <div className="container">
-          <div className="home-services__grid">
-            <ScrollReveal direction="left" className="home-services__info">
-              <span className="section-label">Join Us</span>
-              <h2 className="section-title">Weekly Programs</h2>
-              <p>
-                Experience powerful worship, Spirit-filled teaching, and warm fellowship. 
-                We'd love to welcome you and your family!
-              </p>
-              <div className="home-services__schedule">
-                {serviceSchedule.map((svc, i) => (
-                  <div key={i} className="home-services__svc-item">
-                    <div className="home-services__svc-day">{svc.day}</div>
-                    <div className="home-services__svc-details">
-                      <span className="home-services__svc-name">{svc.service}</span>
-                      <span className="home-services__svc-time">
-                        <Clock size={14} /> {svc.time}
-                      </span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <Link to="/events" className="btn btn-gold" style={{ marginTop: 'var(--space-xl)' }}>
-                View All Events <ArrowRight size={18} />
-              </Link>
-            </ScrollReveal>
-
-            <ScrollReveal direction="right" className="home-services__image-wrap">
-              <img 
-                src="/images/high_voltage_birthday2_1771870213007-s8h4AoMC.jpg" 
-                alt="Church worship service" 
-                className="home-services__image" 
-              />
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
+      <WeeklyPrograms />
 
       {/* ===== CTA SECTION ===== */}
       <section className="section home-cta" id="cta-section">
